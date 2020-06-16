@@ -1,0 +1,45 @@
+<%- include('partials/_header'); -%>
+
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-10">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>numero</th>
+                        <th>Problema</th>
+                        <th>Departamento</th>
+                        <th>Municipio</th>
+                        <th>Localidad</th>
+                        <th>Fecha</th>
+                        <th>Descripcion</th>
+                        <th>Escala</th>
+
+
+                    </tr>       
+                </thead>
+                <tbody>
+
+                    <% if(data){%>
+                        <%for(var i = 0; i < data.length;i++){%>
+                            <tr>
+                                <td><%= i + 1%></td>
+                                <td><%= data[i].Problema%></td>
+                                <td><%= data[i].Departamento%></td>
+                                <td><%= data[i].Municipio%></td>
+                                <td><%= data[i].Localidad%></td>
+                                <td><%= data[i].Fecha%></td>
+                                <td><%= data[i].Descripcion%></td>
+                                <td><%= data[i].EscalaPeligro%></td>
+
+                            </tr>
+                        <%}%>
+                        <% }%>
+                </tbody> 
+            </table>
+        </div>
+
+
+
+<%- include('partials/_footer'); -%>

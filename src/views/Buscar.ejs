@@ -1,0 +1,63 @@
+<%- include('partials/_header'); -%>
+
+<div>
+
+</div>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-10">
+            <form action="/Buscar" method="post" >
+                <div class = "form-group">
+                    <label for="sch">Departamento:</label>
+                    <input type="text" name="Departamento" class = "form-control" placeholder="Departamento">
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Buscar
+                </button>
+            </form>
+        </div>
+        <div class="col-md-10">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>numero</th>
+                        <th>Problema</th>
+                        <th>Departamento</th>
+                        <th>Municipio</th>
+                        <th>Localidad</th>
+                        <th>Fecha</th>
+                        <th>Descripcion</th>
+                        <th>Escala</th>
+                        <th>Acciones</th>
+
+                    </tr>       
+                </thead>
+                <tbody>
+
+                    <% if(arra){%>
+                        <%for(var i = 0; i < arra.length;i++){%>
+                            <tr>
+                                <td><%= (i+1)%></td>
+                                <td><%= arra[i].Problema%></td>
+                                <td><%= arra[i].Departamento%></td>
+                                <td><%= arra[i].Municipio%></td>
+                                <td><%= arra[i].Localidad%></td>
+                                <td><%= arra[i].Fecha%></td>
+                                <td><%= arra[i].Descripcion%></td>
+                                <td><%= arra[i].EscalaPeligro%></td>
+                                <td>
+                                    <a href="/delete/<%= arra[i].problem_id%>" class="btn btn-danger">Delete</a>
+                                    <a href="/update/<%= arra[i].problem_id%>"class="btn btn-info">Actualizar</a>
+                                </td>
+
+                            </tr>
+                        <%}%>
+                        <% }%>
+                </tbody> 
+            </table>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer'); -%>

@@ -1,0 +1,40 @@
+<%- include('partials/_header'); -%>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/update/<%= data.problem_id%>" method="post" >
+                        <div class="form-group">
+                            <input type="text" name="Problema" value="<%= data.Problema%>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Departamento" value="<%= data.Departamento%>"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Municipio" value="<%= data.Municipio%>"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Localidad" value="<%= data.Localidad%>"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Fecha" value="<%= data.Fecha%>"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Descripcion" value="<%= data.Descripcion%>"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="EscalaPeligro" value="<%= data.EscalaPeligro%>"  class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Edita el Reporte
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer'); -%>
