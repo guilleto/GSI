@@ -2,11 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >Green Solution Incorporated</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a href="/" class="navbar-brand ">Reporte Ambiental</a>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="/">Green Solution Inc.</a>
+      
+        <ul class="navbar-nav">
+                   
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  id="Orden" data-toggle="dropdown">
+              Ordenar Por:
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/OrdenPro">Problema</a>
+              <a class="dropdown-item" href="/OrdenDep">Departamento</a>
+              <a class="dropdown-item" href="/OrdenMun">Municipio</a>
+              <a class="dropdown-item" href="/OrdenLoc">Localidad</a>
+              <a class="dropdown-item" href="/OrdenFec">Fecha</a>
+              <a class="dropdown-item" href="/OrdenEsc">Escala de Peligro</a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="Busqueda" data-toggle="dropdown">
+              Buscar Por:
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/BuscarPro">Problema</a>
+                <a class="dropdown-item" href="/BuscarDep">Departamento</a>
+                <a class="dropdown-item" href="/BuscarMun">Municipio</a>
+                <a class="dropdown-item" href="/BuscarLoc">Localidad</a>
+                <a class="dropdown-item" href="/BuscarFec">Fecha</a>
+                <a class="dropdown-item" href="/BuscarEsc">Escala de Peligro</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add">Insertar Nuevo Reporte</a>
+          </li>
+        </ul>
     </nav>
