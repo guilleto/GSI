@@ -29,9 +29,8 @@ app.use(morgan('dev'));
 app.use(myConnection(mysql,{
     host:'localhost',
     user: 'root',
-    password: 'StarWars2019_',
-    database: 'appAmbiental',
-
+    password: 'password',
+    database: 'appambiental',
 },'single'));
 
 

@@ -15,7 +15,7 @@
                         <th>Fecha</th>
                         <th>Descripcion</th>
                         <th>Escala</th>
-                        <th>Acciones</th>
+
 
                     </tr>       
                 </thead>
@@ -24,7 +24,7 @@
                     <% if(data){%>
                         <%for(var i = 0; i < data.length;i++){%>
                             <tr>
-                                <td><%= (i+1)%></td>
+                                <td><%= i + 1%></td>
                                 <td><%= data[i].Problema%></td>
                                 <td><%= data[i].Departamento%></td>
                                 <td><%= data[i].Municipio%></td>
@@ -32,10 +32,6 @@
                                 <td><%= data[i].Fecha%></td>
                                 <td><%= data[i].Descripcion%></td>
                                 <td><%= data[i].EscalaPeligro%></td>
-                                <td>
-                                    <a href="/delete/<%= data[i].problem_id%>" class="btn btn-danger">Delete</a>
-                                    <a href="/update/<%= data[i].problem_id%>"class="btn btn-info">Actualizar</a>
-                                </td>
 
                             </tr>
                         <%}%>
@@ -44,7 +40,6 @@
             </table>
         </div>
 
-    </div>
-</div>
+
 
 <%- include('partials/_footer'); -%>
